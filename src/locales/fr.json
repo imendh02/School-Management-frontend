@@ -1,0 +1,50 @@
+{
+    "sidebar": {
+        "dashboard": "Tableau de bord",
+        "classes": "Classes",
+        "signout": "Déconnexion"
+    },
+    "classes": {
+        "name": "Classes",
+        "title": "Liste des classes",
+        "search": "Rechercher une classe",
+        "newest": "Les plus récents",
+        "oldest": "Les plus anciens",
+        "add": "Ajouter une nouvelle classe",
+        "edit" : "Modifier la classe",
+        "class": "Classe",
+        "students": "Étudiants",
+        "view": "Voir les étudiants",
+        "nameRequired": "Nom requis",
+        "addSuccMsg" : "Classe créée avec succès",
+        "nameClass" : "Nom",
+        "noData" : "Aucune classe trouvée."
+    },
+    "students": {
+        "name": "Étudiants",
+        "title": "Liste des étudiants de la classe",
+        "search": "Rechercher un étudiant",
+        "add": "Ajouter un nouvel étudiant",
+        "edit" : "Modifier l'étudiant",
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "email": "Email",
+        "validEmail" : "L'email n'est pas valide",
+        "emailExists" : "L'e-mail existe déjà",
+        "addSuccMsg" : "Étudiant créé avec succès"
+    },
+    "buttons" : {
+        "add" : "Ajouter",
+        "edit" : "Modifier",
+        "delete" : "Supprimer",
+        "cancel" : "Annuler",
+        "required" : "requis"
+    },
+    "confirmAlert": {
+        "text1": "Êtes-vous sûr ?",
+        "text2": "Vous ne pourrez pas annuler cette action !",
+        "text3": "Supprimé !",
+        "text4": "La classe a été supprimée.",
+        "text5": "Étudiant a été supprimé."
+    }
+}

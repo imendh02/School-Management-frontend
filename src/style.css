@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+:root {
+  --main-color : #00293D;
+  --secondary-color : #00698C;
+  --header-text-color : #00141F;
+  --light-blue-color : #9CBFD3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+.ant-select, .ant-select-selector,
+.ant-input,
+.swal2-container.swal2-center>.swal2-popup {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+/* Sweet Alert 2*/
+.swal2-cancel, .swal2-confirm {
+  border-radius: 50px !important;
+  padding: 10px 20px !important;
+  border: 1px solid var(--main-color) !important;
+}
+.swal2-confirm {
+  background-color: var(--main-color) !important;
+}
+.swal2-cancel {
+  color: var(--main-color) !important;
+  background-color: transparent !important;
+}
+/* Modal */
+.form-input {
+  margin: 30px 0;
+}
+.form-input span {
+  font-size: 17px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.form-input .input {
+  height: 45px !important;
+  border-radius: 50px;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.form-input .ant-form-item-explain-connected {
+  margin-left: 15px;
+}
+.ant-modal-footer button {
+  border-radius: 50px;
+  height: 40px;
+  width: 100px;
+  font-size: 17px;
+  font-weight: 500;
+}
+.ant-modal-footer button:nth-child(2) {
+  background-color: var(--main-color);
+  margin-inline-start: 15px !important;
+}
+.ant-modal-footer button:nth-child(1) {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}

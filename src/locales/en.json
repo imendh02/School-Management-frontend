@@ -1,0 +1,50 @@
+{
+    "sidebar": {
+        "dashboard": "Dashboard",
+        "classes": "Classes",
+        "signout": "Sign Out"
+    },
+    "classes" : {
+        "name" : "Classes",
+        "title" : "List of classes",
+        "search" : "Search Class",
+        "newest" : "Newest",
+        "oldest" : "Oldest",
+        "add" : "Add New Class",
+        "edit" : "Edit Class",
+        "class" : "Class",
+        "students" : "Students",
+        "view" : "View Students",
+        "nameRequired" : "Name Required",
+        "addSuccMsg" : "Class created successfully",
+        "nameClass" : "Name",
+        "noData" : "No classes found."
+    },
+    "students" : {
+        "name" : "Students",
+        "title" : "List of students of class",
+        "search" : "Search Student",
+        "add" : "Add New Student",
+        "edit" : "Edit Student",
+        "firstName" : "First Name",
+        "lastName" : "Last Name",
+        "email" : "Email",
+        "validEmail" : "Email is not valid",
+        "emailExists" : "Email already exists",
+        "addSuccMsg" : "Student created successfully"
+    },
+    "buttons" : {
+        "add" : "Add",
+        "edit" : "Edit",
+        "delete" : "Delete",
+        "cancel" : "Cancel",
+        "required" : "required"
+    },
+    "confirmAlert" : {
+        "text1" : "Are you sure?",
+        "text2" : "You won't be able to revert this!",
+        "text3": "Deleted!",
+        "text4": "Class has been deleted.",
+        "text5": "Student has been deleted."
+    }
+}
