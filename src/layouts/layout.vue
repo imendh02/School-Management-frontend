@@ -1,16 +1,23 @@
 <template>
     <div class="layout">
-        <Sidebar />
+        <Sidebar/>
         <div class="main-content">
-            <HeaderNav />
+            <HeaderNav/>
             <router-view />
         </div>
     </div>
 </template>
 
-<script setup>
-    import Sidebar from '../components/Sidebar.vue';
-    import HeaderNav from '../components/Header.vue';
+<script>
+import Sidebar from '../components/Sidebar.vue';
+import HeaderNav from '../components/Header.vue';
+
+export default {
+    components: {
+        Sidebar,
+        HeaderNav
+    }
+};
 </script>
 
 <style scoped>

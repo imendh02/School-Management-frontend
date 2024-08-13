@@ -4,6 +4,10 @@
         "classes": "Classes",
         "signout": "Déconnexion"
     },
+    "dashboard": {
+        "totalStudents": "Total des étudiants",
+        "totalClasses": "Total des classes"
+    },
     "classes": {
         "name": "Classes",
         "title": "Liste des classes",

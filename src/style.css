@@ -16,7 +16,8 @@
 }
 .ant-select, .ant-select-selector,
 .ant-input,
-.swal2-container.swal2-center>.swal2-popup {
+.swal2-container.swal2-center>.swal2-popup,
+.ant-card {
   font-family: "Open Sans", sans-serif !important;
 }
 

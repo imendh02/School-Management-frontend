@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div class="header-left">
-            <h1>Dashboard</h1>
+            <h1>{{ pageTitle }}</h1>
             <hr />
         </div>
         <div class="header-right">
@@ -21,26 +21,58 @@
     </div>
 </template>
 
-<script setup>
-import { ref } from 'vue';
+<script>
 import { useI18n } from 'vue-i18n';
+import { useRoute } from 'vue-router';
 
-const { locale } = useI18n();
-
-const currentLanguage = ref(locale.value === 'en' ? 'English' : 'Français');
-
-const toggleLanguage = () => {
-  const newLocale = locale.value === 'en' ? 'fr' : 'en';
-  locale.value = newLocale;
-  currentLanguage.value = newLocale === 'en' ? 'English' : 'Français';
-  localStorage.setItem('language', newLocale);
+export default {
+    data() {
+        return {
+        currentLanguage: this.getInitialLanguage(),
+        pageTitle: ''
+        };
+    },
+    watch: {
+        '$route.meta.title'(newTitle) {
+            this.updatePageTitle(newTitle);
+        }
+    },
+    mounted() {
+        this.updatePageTitle(this.$route.meta.title)
+    },
+    methods: {
+        toggleLanguage() {
+            const newLocale = this.$i18n.locale === 'en' ? 'fr' : 'en';
+            this.$i18n.locale = newLocale;
+            this.currentLanguage = newLocale === 'en' ? 'English' : 'Français';
+            localStorage.setItem('language', newLocale);
+            this.updatePageTitle(this.$route.meta.title)
+        },
+        getInitialLanguage() {
+            const storedLanguage = localStorage.getItem('language');
+            if (storedLanguage) {
+                this.$i18n.locale = storedLanguage;
+                return storedLanguage === 'en' ? 'English' : 'Français';
+            } else {
+                return this.$i18n.locale === 'en' ? 'English' : 'Français';
+            }
+        },
+        updatePageTitle(title) {
+            if (title === "Dashboard") {
+                this.pageTitle = this.$t('sidebar.dashboard');
+            } else if (title === "Classes") {
+                this.pageTitle = this.$t('sidebar.classes');
+            } else if (title === "Students") {
+                this.pageTitle = this.$t('students.name');
+            } else {
+                this.pageTitle = '';
+            }
+        }
+    },
+    created() {
+        this.currentLanguage = this.getInitialLanguage();
+    }
 };
-
-const storedLanguage = localStorage.getItem('language');
-if (storedLanguage) {
-  locale.value = storedLanguage;
-  currentLanguage.value = storedLanguage === 'en' ? 'English' : 'Français';
-}
 </script>
 
 <style>
